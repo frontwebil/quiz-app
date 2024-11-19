@@ -1,0 +1,40 @@
+.You-score {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Return-Back {
+  display: block;
+  background-color: #ff4d4f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Return-Back:hover {
+  background-color: #d9363e;
+}
+
+.Return-Back:active {
+  background-color: #b71c1c;
+  transform: scale(0.95);
+}
+
+.Return-Back:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}

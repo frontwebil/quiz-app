@@ -1,0 +1,42 @@
+/* App.css */
+
+.App {
+  max-width: 400px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.button-next {
+  display: inline-block;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.button-next:hover {
+  background-color: #218838;
+}
+
+.button-next:active {
+  background-color: #1e7e34;
+  transform: scale(0.95);
+}
+
+.button-next:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
