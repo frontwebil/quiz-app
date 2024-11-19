@@ -7,7 +7,7 @@ export function Quiz({
   nextQuestion,
   answered,
   handleAnswerOption,
-  selectedAnswer
+  selectedAnswer,
 }) {
   const answer = questions[currentQuestion].answer;
   return (
@@ -27,7 +27,9 @@ export function Quiz({
           onClick={nextQuestion}
           disabled={answered ? "" : "disabled"}
         >
-          Next Question
+          {currentQuestion + 1 === questions.length
+            ? "Complete"
+            : "Next Question"}
         </button>
         <p>
           Question {currentQuestion + 1} of {questions.length}

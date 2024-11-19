@@ -6,18 +6,18 @@ import { QuizShowScore } from "./QuizShowScore/QuizShowScore";
 import { SelectQuiz } from "./SelectQuiz/SelectQuiz";
 
 function App() {
-  const [questionsTitle , setquestionsTitle] = useState('Quiz App')
+  const [questionsTitle, setQuestionsTitle] = useState("Quiz App");
   const [questions, setQuestions] = useState("");
-  const [currentQuestion, setcurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
   const goBack = () => {
-    setquestionsTitle('Quiz App')
-    setQuestions('')
-    setcurrentQuestion(0);
+    setQuestionsTitle("Quiz App");
+    setQuestions("");
+    setCurrentQuestion(0);
     setAnswered(false);
     setSelectedAnswer(null);
     setScore(0);
@@ -38,7 +38,7 @@ function App() {
     setSelectedAnswer(null);
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
-      setcurrentQuestion(currentQuestion + 1);
+      setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowScore(true);
     }
@@ -49,7 +49,11 @@ function App() {
       <div className="">
         <div className="quiz-header">{questionsTitle}</div>
         {questions === "" ? (
-          <SelectQuiz quizes={quizes} setQuestions={setQuestions} setquestionsTitle={setquestionsTitle}/>
+          <SelectQuiz
+            quizes={quizes}
+            setQuestions={setQuestions}
+            setquestionsTitle={setQuestionsTitle}
+          />
         ) : (
           <div className="quiz-container">
             {showScore === false ? (
